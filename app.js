@@ -5,6 +5,7 @@ const app = express();
 const PORT = process.env.PORT || 3000; // 3000 is default, but check for PORT in env vars first
 
 app.use(express.json()) // Parses incoming requests automatically for us
+app.use(express.static("public")) // Serves files in public/
 
 // GET /api/health
 app.get("/api/health", (req, res) => {
@@ -14,7 +15,7 @@ app.get("/api/health", (req, res) => {
 // Hook up routers
 app.use("/api", authRouter)
 
-// Unknown Routes - Respond with 404
+// 404 Known Routes
 app.use((req, res) => {
     res.status(404).json({error: "Route not found"})
 })
