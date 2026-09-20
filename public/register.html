@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Register | yNotStudy?</title>
+</head>
+<body>
+    <img src="imgs/yNotStudy logo 1.png" class="logo" alt="y not study logo">
+
+    <div class="navbar">
+        <button onclick="window.location='about.html'">about</button>
+        <button onclick="window.location='index.html'">home</button>
+    </div>
+
+    <form id="register-form">
+        <h2>Register</h2>
+        <input type="text" id="username" placeholder="username" autocapitalize="username" required>
+        <input type="password" id="password" placeholder="password" autocomplete="new-password" required>
+        <button type="submit" id="register-button">Register</button>
+        <p id="error-message"></p>
+    </form>
+
+    <script type="module" src="register.js"></script>
+</body>
+</html>

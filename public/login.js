@@ -3,7 +3,7 @@ import { getToken, login } from "./api/auth.js"
 const REDIRECT_PAGE = "index.html"
 
 if (getToken()) {
-    window.location = REDIRECT_PAGE // Redirects user to home page if they are already logged in
+    window.location.href = REDIRECT_PAGE // Redirects user to home page if they are already logged in
 }
 
 const loginForm = document.querySelector("#login-form")
@@ -19,20 +19,22 @@ loginForm.addEventListener("submit", async (e) => {
     const username = usernameInput.value.trim()
     const password = passwordInput.value
 
-    loginButton.disabled = true
+    loginButton.disabled = true // So the user can't spam
 
     try {
         const result = await login(username, password)
 
-        if (!result.token) {
-            errorDisplay.textContent = result.error || "Login failed (unknown reason). Please try again."
+        if (!result.ok) {
+            errorDisplay.textContent = result.error || "Login failed. Please try again."
             return
         }
 
-        window.location = REDIRECT_PAGE
+        window.location.href = REDIRECT_PAGE
 
     } catch (err) {
-        errorDisplay.textContent = "Could not connect to server. Please try again later."
+        errorDisplay.textContent = "Could not connect to server. Please try again."
+        return
+        
     } finally {
         loginButton.disabled = false
     }

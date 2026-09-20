@@ -12,6 +12,10 @@ export function clearToken() {
     localStorage.removeItem(TOKEN_KEY)
 }
 
+function combineDataWithOK(data, ok) { // Combine response data with response 'ok' value
+    return {ok, ...data}
+}
+
 // POST /api/register
 export async function register(username, password) {
     const res = await fetch("/api/register", {
@@ -20,7 +24,7 @@ export async function register(username, password) {
         body: JSON.stringify({username, password})
     })
 
-    return res.json()
+    return combineDataWithOK(await res.json(), res.ok)
 }
 
 // POST /api/login
@@ -37,13 +41,13 @@ export async function login(username, password) {
         setToken(data.token)
     }
 
-    return data
+    return combineDataWithOK(data, res.ok)
 }
 
 // GET /api/session
 export async function getSession() {
     const token = getToken()
-    if (!token) return {error: "Client error: no session token stored (not logged in)"}
+    if (!token) return {ok: false, error: "Client error: no session token stored (not logged in)"}
 
     const res = await fetch("/api/session", {
         headers: {
@@ -51,13 +55,13 @@ export async function getSession() {
         }
     })
 
-    return res.json()
+    return combineDataWithOK(await res.json(), res.ok)
 }
 
 // POST /api/logout
 export async function logout() {
     const token = getToken()
-    if (!token) return {message: "Already logged out (client)"}
+    if (!token) return {ok: true, message: "Already logged out (client)"}
 
     const res = await fetch("/api/logout", {
         method: "POST",
@@ -68,5 +72,5 @@ export async function logout() {
 
     clearToken()
 
-    return res.json()
+    return combineDataWithOK(await res.json(), res.ok)
 }
