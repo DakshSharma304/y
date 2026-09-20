@@ -12,3 +12,7 @@ export function verifyPassword(candidatePassword, storedCombinedHash) { // Tests
     const candidateHashBytes = scryptSync(candidatePassword, salt, 64)
     return timingSafeEqual(storedHashBytes, candidateHashBytes) // timingSafeEqual is like ===, but it doesn't stop immediately when it finds a mismatch which protects against timing attacks 
 }
+
+export function generateSessionToken() {
+    return randomBytes(32).toString("hex")
+}

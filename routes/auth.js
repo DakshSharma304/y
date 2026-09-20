@@ -1,11 +1,17 @@
 import {Router} from "express"
-import {hashPassword, verifyPassword} from "../utils/crypto.js"
+import {generateSessionToken, hashPassword, verifyPassword} from "../utils/crypto.js"
 
 const router = Router()
 
 // Temporary mock data storage (will be replaced with an actual database eventually)
 const users = new Map() // Stores key-value pairs (key: username, value: user object, containing username and passwordHash)
 const sessions = new Map()
+
+// Middleware function that protects the routes by validating the session token first
+// export function requireAuth(req, res, next) {
+//     const authHeader = req.headers.authorization
+//     const token = authHeader && 
+// }
 
 // POST /api/register
 router.post("/register", (req, res) => {
@@ -45,9 +51,13 @@ router.post("/login", (req, res) => {
         return res.status(401).json({error: "Unauthorized - invalid username or password"})
     }
 
-    // TODO: Implement session key system
+    // Generate and store session token
+    const token = generateSessionToken()
+    sessions.set(token, {username: user.username, createdAt: Date.now()})
 
-    return res.json({message: "Login successful"})
+    console.log(sessions) // Temporary debug print
+
+    return res.json({message: "Login successful", token})
 })
 
 export default router;
