@@ -64,14 +64,14 @@ router.post("/login", (req, res) => {
     
     // Make sure both username and password has been given
     if (!username || !password) {
-        return res.status(400).json({error: "Both username and password are required"})
+        return res.status(400).json({error: "Both Username and Password are Required"})
     }
 
     const user = users.get(username)
 
     // Check to see whether username exists and password is correct
     if (!user || !verifyPassword(password, user.passwordHash)) {
-        return res.status(401).json({error: "Unauthorized - invalid username or password"})
+        return res.status(401).json({error: "Invalid Username or Password"})
     }
 
     // Generate and store session token
@@ -89,8 +89,8 @@ router.post("/logout", requireAuth, (req, res) => {
     return res.json({message: "Logged out successfully"})
 })
 
-// GET /api/test-session-token
-router.get("/test-session-token", requireAuth, (req, res) => {
+// GET /api/session - tests and returns the user's session
+router.get("/session", requireAuth, (req, res) => {
     return res.json({message: "Session is valid", session: req.session})
 })
 
