@@ -8,19 +8,31 @@ const users = new Map() // Stores key-value pairs (key: username, value: user ob
 const sessions = new Map()
 
 // Middleware function that protects the routes by validating the session token first
+const SESSION_TOKEN_EXPIRATION_MS = 30 * 24 * 60 * 60 * 1000 // 30 days converted to milliseconds
+
 export function requireAuth(req, res, next) {
+    // Get & make sure authHeader exists
     const authHeader = req.headers.authorization
     if (!authHeader) {
         return res.status(401).json({error: "Unauthorized - missing authorization header"})
     }
 
+    // Get & validate token
     const token = authHeader.split(" ")[1]; // authHeader format is "Bearer <Token>" so we are splitting it by the space
     if (!token || !sessions.has(token)) {
         return res.status(401).json({error: "Unauthorized - missing or invalid session token"})
     }
 
-    req.user = sessions.get(token); // So the request knows who the user is
+    // Pass on values to request
+    req.session = sessions.get(token); // So the request knows who the user is
     req.token = token
+
+    // Check if session expired
+    if (Date.now() - req.session.createdAt > SESSION_TOKEN_EXPIRATION_MS) {
+        sessions.delete(token);
+        return res.status(401).json({error: "Unauthorized - session expired"})
+    }
+    
     next();
 }
 
