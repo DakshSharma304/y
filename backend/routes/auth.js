@@ -1,5 +1,5 @@
 import {Router} from "express"
-import {hashPassword} from "./crypto.js"
+import {hashPassword} from "../utils/crypto.js"
 
 const router = Router()
 
