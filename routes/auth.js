@@ -91,7 +91,7 @@ router.post("/logout", requireAuth, (req, res) => {
 
 // GET /api/test-session-token
 router.get("/test-session-token", requireAuth, (req, res) => {
-    return res.json({message: "Session is valid", user: req.user})
+    return res.json({message: "Session is valid", session: req.session})
 })
 
 export default router;
