@@ -1,18 +1,22 @@
 import express from "express";
+import authRouter from "./auth.js"
 
 const app = express();
 const PORT = process.env.PORT || 3000; // 3000 is default, but check for PORT in env vars first
 
 app.use(express.json()) // Parses incoming requests automatically for us
 
-// Health Route
+// GET /api/health
 app.get("/api/health", (req, res) => {
     res.json({status: "success", message: "Backend running!"})
 })
 
+// Hook up routers
+app.use("/api", authRouter)
+
 // Unknown Routes - Respond with 404
 app.use((req, res) => {
-    res.status(404)
+    res.status(404).json({error: "Route not found"})
 })
 
 app.listen(PORT, () => {
