@@ -1,4 +1,5 @@
 import {Router} from "express"
+import {hashPassword} from "./crypto.js"
 
 const router = Router()
 
@@ -19,7 +20,9 @@ router.post("/register", (req, res) => {
         return res.status(400).json({error: "Username already exists"})
     }
 
-    users.set(username, password) // Note: IMPLEMENT HASHING!!!
+    // Store username & password
+    const passwordHash = hashPassword(password)
+    users.set(username, passwordHash)
 
     console.log(users) // Temporary debug print
 
