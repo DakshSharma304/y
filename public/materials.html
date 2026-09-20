@@ -1,41 +1,49 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-
-<link rel="stylesheet" href="./css/style.css">
-<title>Add Materials | yNotStudy?</title>
-
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Add Materials | yNotStudy?</title>
 </head>
-
 <body>
-    <div class = "materials">
-        <input type="text" id="matCourseName" placeholder="course name">
-        <input type="text" id="matUnitName" placeholder="unit name">
-        <input type="text" id="matDescription" placeholder="description">
-        <div class = "files">
+    <img src="imgs/yNotStudy logo 1.png" class="logo" alt="ynotstudy logo">
+    
+    <div class="navbar">
+        <button onclick="window.location.href='home.html'">courses</button>
+        <button onclick="window.location.href='about.html'">about</button>
+    </div>
 
-        </div>
+    <main class="materials">
+        <h2>Add Materials</h2>
+        
+        <input type="text" id="matCourseName" placeholder="course name" required>
+        <input type="text" id="matUnitName" placeholder="unit name" required>
+        <input type="text" id="matDescription" placeholder="description">
+
+        <label for="materialUpload" class="uploadBox" id="dropZone">
+            <h2>Upload course materials</h2>
+            <p>Drag and drop or click to select files</p>
+        </label>
+        <input type="file" id="materialUpload" multiple hidden>
+
+        <!-- Staged file list -->
+        <div class="files" id="fileList"></div>
 
         <template id="file-template">
             <div class="file">
                 <span class="fileName"></span>
-                <button class="removeFile">x</button>
+                <button type="button" class="removeFile">x</button>
             </div>
         </template>
 
-        <label for="materialUpload" class="uploadBox">
-                <h2>Upload course materials</h2>
-                <p>Drag and drop or click to select file</p>
-        </label>
+        <p id="error-message" class="error-text"></p>
 
-        <input type="file" id="materialUpload" multiple hidden>
-        <div class = "matOptions">
-            <button id = "addToCourse">Add unit to course</button>
-            <button id = "addToCourse">Create new course with unit</button>
+        <div class="matOptions">
+            <button type="button" id="addToCourseBtn">Add unit to course</button>
+            <button type="button" id="createCourseBtn">Create new course with unit</button>
         </div>
-    </div>
-</body>
+    </main>
 
+    <script type="module" src="./js/materials.js"></script>
+</body>
 </html>
