@@ -8,7 +8,7 @@ app.use(express.json()) // Parses incoming requests automatically for us
 
 // GET /api/health
 app.get("/api/health", (req, res) => {
-    res.json({status: "success", message: "Backend running!"})
+    res.json({message: "Backend running!"})
 })
 
 // Hook up routers

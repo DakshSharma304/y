@@ -5,3 +5,10 @@ export function hashPassword(plainPassword) {
     const hash = scryptSync(plainPassword, salt, 64).toString("hex"); // Scrypt is a specialized hashing function
     return `${salt}:${hash}`
 }
+
+export function verifyPassword(candidatePassword, storedCombinedHash) { // Tests to see whether the password in question (candidatePassword) matches our stored hash
+    const [salt, storedHash] = storedCombinedHash.split(":")
+    const storedHashBytes = Buffer.from(storedHash, "hex") // Converts human-readable hex hash back into bytes which computer can understand
+    const candidateHashBytes = scryptSync(candidatePassword, salt, 64)
+    return timingSafeEqual(storedHashBytes, candidateHashBytes) // timingSafeEqual is like ===, but it doesn't stop immediately when it finds a mismatch which protects against timing attacks 
+}
