@@ -1,0 +1,1 @@
+- add strength detection for password (so user can't enter a weak password)
