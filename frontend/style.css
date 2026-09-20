@@ -3,7 +3,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: rgb(16, 16, 16);
+    background-color: #0f0f0f;
     color:white;
     gap: 40px;
     font-family: Arial, sans-serif;
@@ -44,7 +44,7 @@ button {
 }
 
 button:hover {
-    background-color: rgb(25, 25, 25);
+    background-color: 0f0f0f;
 }
 
 .logo {
@@ -64,4 +64,8 @@ button:hover {
     padding: 100px;
     justify-content: center;
     align-items: center;
+}
+
+img {
+    border-radius: 5px;
 }
