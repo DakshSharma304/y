@@ -1,0 +1,67 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(16, 16, 16);
+    color:white;
+    gap: 40px;
+    font-family: Arial, sans-serif;
+}
+
+.textCard {
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: 40vw;
+    padding: 50px;
+    border-radius: 50px;
+}
+
+.navbar {
+    background-color:black;
+    height: fit-content;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+
+button {
+    height: fit-content;
+    width: fit-content;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 50px;
+    border: 0;
+    background-color: black;
+    color: white;
+}
+
+button:hover {
+    background-color: rgb(25, 25, 25);
+}
+
+.logo {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: black;
+    height: fit-content;
+    width: fit-content;
+    border-radius: 50px;
+    padding: 100px;
+    justify-content: center;
+    align-items: center;
+}
