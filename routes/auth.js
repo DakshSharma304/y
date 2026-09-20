@@ -8,10 +8,21 @@ const users = new Map() // Stores key-value pairs (key: username, value: user ob
 const sessions = new Map()
 
 // Middleware function that protects the routes by validating the session token first
-// export function requireAuth(req, res, next) {
-//     const authHeader = req.headers.authorization
-//     const token = authHeader && 
-// }
+export function requireAuth(req, res, next) {
+    const authHeader = req.headers.authorization
+    if (!authHeader) {
+        return res.status(401).json({error: "Unauthorized - missing authorization header"})
+    }
+
+    const token = authHeader.split(" ")[1]; // authHeader format is "Bearer <Token>" so we are splitting it by the space
+    if (!token || !sessions.has(token)) {
+        return res.status(401).json({error: "Unauthorized - missing or invalid session token"})
+    }
+
+    req.user = sessions.get(token); // So the request knows who the user is
+    req.token = token
+    next();
+}
 
 // POST /api/register
 router.post("/register", (req, res) => {
@@ -58,6 +69,17 @@ router.post("/login", (req, res) => {
     console.log(sessions) // Temporary debug print
 
     return res.json({message: "Login successful", token})
+})
+
+// POST /api/logout
+router.post("/logout", requireAuth, (req, res) => {
+    sessions.delete(req.token)
+    return res.json({message: "Logged out successfully"})
+})
+
+// GET /api/test-session-token
+router.get("/test-session-token", requireAuth, (req, res) => {
+    return res.json({message: "Session is valid", user: req.user})
 })
 
 export default router;
