@@ -1,2 +1,4 @@
 - add strength detection for password (so user can't enter a weak password)
 son we have beter stuf to do
+- implement material storage on the server side
+- use db for username & password storage
