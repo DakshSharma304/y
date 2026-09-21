@@ -3,14 +3,14 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #0f0f0f;
+    background-color: black;
     color:white;
     gap: 40px;
     font-family: Arial, sans-serif;
 }
 
 .textCard {
-    background-color: black;
+    background-color: rgba(15,15,15,0.8);
     justify-content: center;
     align-items: center;
     display: flex;
@@ -19,14 +19,26 @@ body {
     width: 40vw;
     padding: 50px;
     border-radius: 50px;
+    background: linear-gradient(to bottom right, #0f0f0f, #000000);
+    backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-left: 1px solid rgba(255,255,255,0.05);
+    border-right: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
 .navbar {
-    background-color:black;
+    background-color:rgba(15,15,15,0.8);
     height: fit-content;
     width: fit-content;
     padding: 10px;
     border-radius: 50px;
+    background: linear-gradient(to bottom right, #0f0f0f, black);
+    backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255,255,255,0.05);
+    border-left: 1px solid rgba(255,255,255,0.05);
+    border-right: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
 
@@ -39,12 +51,24 @@ button {
     padding-bottom: 10px;
     border-radius: 50px;
     border: 0;
-    background-color: black;
+    background-color: rgba(15,15,15,0.8);
     color: white;
+    background: linear-gradient(to bottom right, #0f0f0f, black);
+    backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255,255,255,0.05);
+    border-left: 1px solid rgba(255,255,255,0.05);
+    border-right: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
 button:hover {
-    background-color: #0f0f0f;
+    background-color: rgba(31,31,31,0.8);
+    background: linear-gradient(to bottom right, #1f1f1f, #0f0f0f);
+    backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255,255,255,0.05);
+    border-left: 1px solid rgba(255,255,255,0.05);
+    border-right: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
 .logo {
@@ -53,17 +77,23 @@ button:hover {
     left: 20px;
 }
 
-.login {
+#login-form {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    background-color: black;
+    background-color: rgba(15,15,15,0.8);
     height: fit-content;
     width: fit-content;
     border-radius: 50px;
     padding: 100px;
     justify-content: center;
     align-items: center;
+    background: linear-gradient(to bottom right, #0f0f0f, black);
+    backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255,255,255,0.05);
+    border-left: 1px solid rgba(255,255,255,0.05);
+    border-right: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
 img {
@@ -73,27 +103,45 @@ img {
 .courses {
     width: 80vw;
     height: 80vh;
-    background-color: black;
+    background-color: rgba(15,15,15,0.8);
     padding: 40px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     border-radius: 40px;
     gap: 20px;
+    background: linear-gradient(to bottom right, #0f0f0f, black);
+    backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255,255,255,0.05);
+    border-left: 1px solid rgba(255,255,255,0.05);
+    border-right: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
 .newMaterial {
     position: fixed;
     right: 10vw;
     top: 5vh;
+    background: linear-gradient(to bottom right, #0f0f0f, #000000);
+    backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255,255,255,0.05);
+    border-left: 1px solid rgba(255,255,255,0.05);
+    border-right: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
 input {
-    background-color: black;
+    background-color: rgba(15,15,15,0.8);
     color: white;
     padding: 20px;
     border: 0;
     border-radius: 30px;
+    background: linear-gradient(to bottom right, #0f0f0f, black);
+    backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255,255,255,0.05);
+    border-left: 1px solid rgba(255,255,255,0.05);
+    border-right: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
 .materials {
@@ -108,9 +156,15 @@ input {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    background-color: black;
+    background-color: rgba(15,15,15,0.8);
     padding: 30px;
     border-radius: 30px;
+    background: linear-gradient(to bottom right, #0f0f0f, black);
+    backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255,255,255,0.05);
+    border-left: 1px solid rgba(255,255,255,0.05);
+    border-right: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
 .uploadBox {
@@ -119,8 +173,14 @@ input {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #0f0f0f;
+    background-color: rgba(31,31,31,0.8);
     border-radius: 20px;
+    background: linear-gradient(to bottom right, #0f0f0f, black);
+    backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255,255,255,0.05);
+    border-left: 1px solid rgba(255,255,255,0.05);
+    border-right: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
 .wholeChatPage {
@@ -133,11 +193,17 @@ input {
     padding: 20px;
     gap: 20px;
     box-sizing: border-box;
+    background: linear-gradient(to bottom right, #0f0f0f, black);
+    backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255,255,255,0.05);
+    border-left: 1px solid rgba(255,255,255,0.05);
+    border-right: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
 .sidebar {
     height: 95%;
-    background-color: black;
+    background-color: rgba(15,15,15,0.8);
     border-radius: 30px;
     width: 300px; /*you need to make this resizable with js magic*/
     display: flex;
@@ -146,13 +212,19 @@ input {
     padding: 10px;
     align-items: center;
     box-sizing: border-box;
+    background: linear-gradient(to bottom right, #0f0f0f, black);
+    backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255,255,255,0.05);
+    border-left: 1px solid rgba(255,255,255,0.05);
+    border-right: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
 .chat {
     display: flex;
     flex: 1;
     min-width: 0;
-    background-color: black;
+    background-color: rgba(15,15,15,0.8);
     border-radius: 30px;
     height: 95%;
     flex-direction:column;
@@ -161,6 +233,12 @@ input {
     justify-content: center;
     padding: 20px;
     box-sizing: border-box;
+    background: linear-gradient(to bottom right, #0f0f0f, black);
+    backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255,255,255,0.05);
+    border-left: 1px solid rgba(255,255,255,0.05);
+    border-right: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
 .chatPage {
@@ -173,45 +251,81 @@ input {
     display: flex;
     flex-direction: column;
     overflow-y: auto; /*handles overflow but you need to implement go to latest message in js*/
+    background: linear-gradient(to bottom right, #0f0f0f, black);
+    backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255,255,255,0.05);
+    border-left: 1px solid rgba(255,255,255,0.05);
+    border-right: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
 #prompt {
     flex: 1;
-    background-color: #0f0f0f;
+    background-color: rgba(31,31,31,0.8);
+    background: linear-gradient(to bottom right, #1f1f1f, #0f0f0f);
+    backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255,255,255,0.05);
+    border-left: 1px solid rgba(255,255,255,0.05);
+    border-right: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
 .prompt {
     display: flex;
     flex-direction: row;
     width: 95%;
-    background-color: #0f0f0f;
+    background-color: rgba(31,31,31,0.8);
     padding: 5px;
     align-items: center;
     justify-content: center;
     border-radius: 50px;
     gap: 5px;
+    background: linear-gradient(to bottom right, #1f1f1f, #0f0f0f);
+    backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255,255,255,0.05);
+    border-left: 1px solid rgba(255,255,255,0.05);
+    border-right: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
 #send {
-    background-color: #0f0f0f;
+    background-color: rgba(31,31,31,0.8);
+    background: linear-gradient(to bottom right, #1f1f1f, #0f0f0f);
+    backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255,255,255,0.05);
+    border-left: 1px solid rgba(255,255,255,0.05);
+    border-right: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
 .AIresponseDiv {
     display: flex;
     padding: 20px;
-    background-color: #0f0f0f;
+    background-color: rgba(31,31,31,0.8);
     width: fit-content;
     height: fit-content;
     max-width: 75%;
     align-self: flex-start;
+    background: linear-gradient(to bottom right, #1f1f1f, #0f0f0f);
+    backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255,255,255,0.05);
+    border-left: 1px solid rgba(255,255,255,0.05);
+    border-right: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
 .promptMessageDiv {
     display: flex;
     padding: 20px;
-    background-color: #0f0f0f;
+    background-color: rgba(31,31,31,0.8);
     width: fit-content;
     height: fit-content;
     max-width: 75%;
     align-self: flex-end;
+    background: linear-gradient(to bottom right, #1f1f1f, #0f0f0f);
+    backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255,255,255,0.05);
+    border-left: 1px solid rgba(255,255,255,0.05);
+    border-right: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
 }
