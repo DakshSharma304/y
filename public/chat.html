@@ -10,9 +10,24 @@
 <body class = "chatPage">
     <div class = "wholeChatPage">
         <div class = "sidebar">
-
+            <img src = "imgs/yNotStudy logo 1.png" class = "logo" alt = "yNotStudy logo">
+            <button id="newMaterial">New Material</button>
         </div>
 
+        <template id = "currentlySelected">
+            <button id = "subjectButton"></button>
+            <div class = "indent">
+                <button id = "unitChat1"></button>
+                <button id = "unitChat2"></button>
+                <button id = "unitChat3"></button>
+                <button id = "unitChat4"></button>
+            </div>
+        </template>
+
+        <template id = "otherSubjects">
+            <button class = "otherSubject"></button>
+        </template>
+        
         <div class = "chat">
             <div class = "messages">
                 
@@ -26,12 +41,12 @@
 
     <template id = "AIresponse">
         <div class="AIresponseDiv">
-            <p></p> /*to be manipulated with dom*/
+            <p></p> <!--to be manipulated with dom-->
         </div>
     </template>
     <template id = "promptMessage">
         <div class="promptMessageDiv">
-            <p></p> /*to be manipulated with dom*/
+            <p></p> <!--to be manipulated with dom-->
         </div>
     </template>
 </body>
