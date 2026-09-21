@@ -12,10 +12,6 @@ export function clearToken() {
     localStorage.removeItem(TOKEN_KEY)
 }
 
-function combineDataWithOK(data, ok) { // Combine response data with response 'ok' value
-    return {ok, ...data}
-}
-
 // POST /api/register
 export async function register(username, password) {
     const res = await fetch("/api/register", {
@@ -24,7 +20,7 @@ export async function register(username, password) {
         body: JSON.stringify({username, password})
     })
 
-    return combineDataWithOK(await res.json(), res.ok)
+    return {ok: res.ok, ...await res.json()}
 }
 
 // POST /api/login
@@ -41,7 +37,7 @@ export async function login(username, password) {
         setToken(data.token)
     }
 
-    return combineDataWithOK(data, res.ok)
+    return {ok: res.ok, ...data}
 }
 
 // GET /api/session
@@ -55,7 +51,7 @@ export async function getSession() {
         }
     })
 
-    return combineDataWithOK(await res.json(), res.ok)
+    return {ok: res.ok, ...await res.json()}
 }
 
 // POST /api/logout
@@ -72,5 +68,5 @@ export async function logout() {
 
     clearToken()
 
-    return combineDataWithOK(await res.json(), res.ok)
+    return {ok: res.ok, ...await res.json()}
 }

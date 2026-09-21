@@ -12,6 +12,12 @@ app.get("/api/health", (req, res) => {
     res.json({message: "Backend running!"})
 })
 
+// POST /api/materials
+app.post("/api/materials", (req, res) => {
+    // TODO: IMPLEMENT
+    res.json({message: "To be implemented soon"})
+})
+
 // Hook up routers
 app.use("/api", authRouter)
 
