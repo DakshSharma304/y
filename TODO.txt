@@ -1,1 +1,2 @@
 - add strength detection for password (so user can't enter a weak password)
+son we have beter stuf to do
