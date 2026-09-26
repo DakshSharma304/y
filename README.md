@@ -7,6 +7,11 @@ Capabilities:
 - **Algorithm** - Generates and chooses questions through priority weighting based on factors such as mastery, weaknesses, and spaced repetition
 - **Long term self-improvement via class-specific generic memory** - Stores long term trends and patterns locally, such as how tests tend to be in a class, and uses those to adapt to the class over time, allowing generated questions and other things to be more accurate
 - **Long term self-improvement via student-specific memory** - learns how the student studies, what they struggle with, and other information, allowing it to better teach and adapt to their unique learning style
+- **Student-work reasoning analysis** - analyzes the students approach to the problem and where it went wrong
+- **Test-aware studying** - changes focus based on time until test and how the student is doing
+- **Answer scaffolding** - never gives answer directly; instead hints towards it so student can discover it themselves
+- **Understanding prioritization** - when time permits, and where feasible(ex. some math requires more complex math to prove the math formula), prefers to explain WHY thing works
+- **AccuTest™** - generates a test based on known information about the teacher's style and past assessments, class contents, what was taught, how it was taught, etc., allowing for mock tests more accurate to the test the student will actually take
 
 # Implementation Log
 ## NinjazGY2497 (gyagau)
