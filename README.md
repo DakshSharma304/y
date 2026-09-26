@@ -5,7 +5,8 @@ Y Not Study is an adaptive study app designed to learn about both you and the in
 Capabilities:
 - **Material Uploading** - The model ingests the notes, packets, assignments, and even practice tests that you provide it, so your studying in our app is never behind your classroom progress
 - **Algorithm** - Generates and chooses questions through priority weighting based on factors such as mastery, weaknesses, and spaced repetition
-... [more to be added here] ...
+- **Long term self-improvement via class-specific generic memory** - Stores long term trends and patterns locally, such as how tests tend to be in a class, and uses those to adapt to the class over time, allowing generated questions and other things to be more accurate
+- **Long term self-improvement via student-specific memory** - learns how the student studies, what they struggle with, and other information, allowing it to better teach and adapt to their unique learning style
 
 # Implementation Log
 ## NinjazGY2497 (gyagau)
@@ -23,3 +24,4 @@ Capabilities:
 - Frontend: Adding/uploading materials feature
 
 ## DakshSharma304 (dakshsharmanj)
+### is this necessary i do ui/ux and conceptual work
