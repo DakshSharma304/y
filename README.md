@@ -30,3 +30,8 @@ Capabilities:
 
 ## DakshSharma304 (dakshsharmanj)
 ### is this necessary i do ui/ux and conceptual work
+### Sunday, Sept 20 (Week 1)
+- Frontend: made stuff look cool ill start more detailed week 2 onwards
+### Saturday, Sept 26 (Week 2)
+- Frontend: working on figma-ing the frontpage
+- THE GREAT REACT MIGRATION BEGINSSSSSS(cuz im sick of html)

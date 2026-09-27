@@ -1,12 +1,19 @@
-body {
+#root {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     background-color: black;
     color:white;
     gap: 40px;
     font-family: Arial, sans-serif;
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding: 20px;
+    
+}
+
+body {
+    margin: 0;
 }
 
 .textCard {
@@ -116,6 +123,7 @@ img {
     border-left: 1px solid rgba(255,255,255,0.05);
     border-right: 1px solid rgba(255,255,255,0.05);
     border-bottom: 1px solid rgba(255,255,255,0.05);
+    box-sizing: border-box;
 }
 
 .newMaterial {
@@ -145,6 +153,7 @@ input {
 }
 
 .materials {
+    box-sizing: border-box;
     width: 40vw;
     height: fit-content;
     position: absolute;
@@ -241,9 +250,11 @@ input {
     border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
-.chatPage {
-    margin: 0;
+
+#root {
+    padding: 0;
 }
+
 
 .messages {
     height: 90%;
@@ -331,4 +342,10 @@ input {
 
 .navbar button:hover {
     background: #0f0f0f;
+}
+
+.indent {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
 }
