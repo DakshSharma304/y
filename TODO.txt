@@ -4,3 +4,5 @@ son we have beter stuf to do
 - use db for username & password storage
 - what happens if user's session token is invalid or expired? backend should tell frontend to wipe it from local storage, right?
 - should scryptSync be used if its synchronous and will block the server?
+- we need a size limit for materials (per material or per account?)
+- decision: store files in db or cloud storage/other?
