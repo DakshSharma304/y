@@ -35,3 +35,5 @@ Capabilities:
 ### Saturday, Sept 26 (Week 2)
 - Frontend: working on figma-ing the frontpage
 - THE GREAT REACT MIGRATION BEGINSSSSSS(cuz im sick of html)
+- React was lowkey light phew
+- Implementing frontend

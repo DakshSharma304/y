@@ -10,7 +10,8 @@ function Chat() {
                 <div className = "wholeChatPage">
                     <div className = "sidebar">
                         <img src = {logo} alt = "yNotStudy logo" />
-                        <button id="newMaterial">New Material</button>
+                        
+                        <button id="newMaterial" onClick={() => navigate("/materials")}>New Material</button>
                     </div>
 
                     <div className = "chat">
