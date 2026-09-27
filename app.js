@@ -1,5 +1,6 @@
 import express from "express";
 import authRouter from "./routes/auth.js"
+import coursesRouter from "./routes/courses.js"
 
 const app = express();
 const PORT = process.env.PORT || 3000; // 3000 is default, but check for PORT in env vars first
@@ -20,6 +21,7 @@ app.post("/api/materials", (req, res) => {
 
 // Hook up routers
 app.use("/api", authRouter)
+app.use("/api/courses", coursesRouter)
 
 // 404 Known Routes
 app.use((req, res) => {
