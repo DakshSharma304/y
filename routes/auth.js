@@ -1,6 +1,6 @@
-import {Router} from "express"
-import {generateSessionToken, hashPassword, verifyPassword} from "../utils/crypto.js"
-import {db} from "../config/db.js"
+import { Router } from "express"
+import { generateSessionToken, hashPassword, verifyPassword } from "../utils/crypto.js"
+import { db } from "../config/db.js"
 
 const router = Router()
 

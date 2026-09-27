@@ -1,4 +1,4 @@
-import {createClient} from "@libsql/client";
+import { createClient } from "@libsql/client";
 import "dotenv/config"
 
 const dbURL = process.env.TURSO_DATABASE_URL
