@@ -29,11 +29,12 @@ Capabilities:
 - Frontend: Adding/uploading materials feature
 
 ## DakshSharma304 (dakshsharmanj)
-### is this necessary i do ui/ux and conceptual work
 ### Sunday, Sept 20 (Week 1)
 - Frontend: made stuff look cool ill start more detailed week 2 onwards
 ### Saturday, Sept 26 (Week 2)
 - Frontend: working on figma-ing the frontpage
 - THE GREAT REACT MIGRATION BEGINSSSSSS(cuz im sick of html)
+### Sunday, Sept 27 (Week 2)
 - React was lowkey light phew
-- Implementing frontend
+- Implementing frontpage that i figmad(was very hard bc it required JS ugh)
+- THE CAROUSEL is my proudest web work, lifetime!!! lol

@@ -5,3 +5,5 @@ function UserMessage({ text }) {
         </div>
     )
 }
+
+export default UserMessage

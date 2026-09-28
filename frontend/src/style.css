@@ -350,3 +350,166 @@ input {
     display: flex;
     flex-direction: column;
 }
+
+.makeBigger {
+    font-size: 6rem;
+}
+
+.left { 
+    align-self: flex-start;
+    margin-left: 20%; 
+}
+
+.right { 
+    align-self: flex-end;
+    margin-right: 20%
+}
+
+.compare {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.compareCard {
+    width: 350px;
+    height: 400px;
+    min-width: 0;
+    overflow-wrap: break-word;
+    border-radius: 30px;
+    background: linear-gradient(to bottom right, #0f0f0f, black);
+    backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255,255,255,0.05);
+    border-left: 1px solid rgba(255,255,255,0.05);
+    border-right: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.compareCard li {
+    margin-bottom: 30px;
+    font-size: 1.4rem;
+}
+
+.divider {
+    width: 4px;
+    height: 400px;
+    background-color: #1f1f1f;
+}
+
+
+.carouselSlot {
+    position: absolute;
+    left: 50%;
+    top: 80px;
+    transform-style: preserve-3d;
+    transition: opacity 0.5s ease;
+}
+
+.carouselCard {
+    width: 450px;
+    height: 300px;
+    transform: translateX(-50%);
+    background: linear-gradient(to bottom right, #0f0f0f, black);
+    backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255,255,255,0.05);
+    border-left: 1px solid rgba(255,255,255,0.05);
+    border-right: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    border-radius: 30px;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    
+}
+
+.carouselSlot.active .carouselCard { 
+    transform: translateX(-50%);
+}
+
+.carouselSlot.left .carouselCard {
+    transform-origin: right center;
+    transform: translateX(-50%) translateX(-500px) rotateY(-30deg);
+    
+}
+
+.carouselSlot.right .carouselCard {
+    transform-origin: left center; 
+    transform: translateX(-50%) translateX(500px) rotateY(30deg);
+}
+
+.carousel {
+    position: relative;
+    perspective: 600px;
+    height: 400px;
+    gap: 40px;
+}
+
+.carouselLR {
+    background: linear-gradient(to bottom right, #0f0f0f, black);
+    backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255,255,255,0.05);
+    border-left: 1px solid rgba(255,255,255,0.05);
+    border-right: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    border-radius: 100px;
+    padding: 1px;
+    display: flex;
+    overflow: hidden;
+}
+
+.carouselLR button {
+    border: none;
+    background: transparent;
+    border-radius: 0;
+    margin: 0;
+    backdrop-filter: none;
+}
+
+.carouselLR button:hover {
+    background: #0f0f0f;
+    border-radius: 0;
+    margin: 0;
+    border: none;
+    backdrop-filter: none
+}
+
+.carouselSlot.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.horzdiv {
+    width: 90%;
+    height: 2px;
+    background: white;
+}
+
+#enlightenment {
+    margin-bottom: 20px;
+}
+
+.carouselSlot.farLeft .carouselCard {
+    transform-origin: right center;
+    transform: translateX(-50%) translateX(-900px) rotateY(-30deg);
+}
+
+.carouselSlot.farRight .carouselCard {
+    transform-origin: left center;
+    transform: translateX(-50%) translateX(900px) rotateY(300deg);
+}
+
+.carouselSlot.farLeft, .carouselSlot.farRight {
+    opacity: 0;
+    pointer-events: none;
+}

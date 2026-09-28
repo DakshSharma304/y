@@ -12,3 +12,5 @@ function SelectedSubject({ subject, units }) {
         </>
     )
 }
+
+export default SelectedSubject
